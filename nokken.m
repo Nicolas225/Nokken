@@ -9,3 +9,4 @@
 % van 190° tot 210° : een konstante druk-kracht van 550 N
 % van 210° tot 250° : een lineair afnemende trek-kracht van 300 N tot 0 N
 % De gevraagde cyclustijd voor de bewerking uitgevoerd door de volger is 0.05 sec.
+
