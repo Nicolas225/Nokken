@@ -29,3 +29,7 @@ optim_options = optimset('Display','off','Tolfun',1e-13);
 disp(b3 + 180);
 disp(b6 + 180);
 
+%% 
+
+out = load('params.mat');
+
