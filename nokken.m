@@ -10,3 +10,22 @@
 % van 210° tot 250° : een lineair afnemende trek-kracht van 300 N tot 0 N
 % De gevraagde cyclustijd voor de bewerking uitgevoerd door de volger is 0.05 sec.
 
+%% Hefwet
+
+% Berekening van de tweede cycloïde (= segmenten 2 en 3)
+
+
+L = 35;
+t = 30;
+
+
+C3 = @(b) (15 - L*(1-(t/b)+(1/pi)*sin(pi*(t/b))));
+C6 = @(b) (15 - L*(1-(t/b)+(1/(2*pi))*sin(2*pi*(t/b))));
+
+optim_options = optimset('Display','off','Tolfun',1e-13);
+
+[b3, fval3, exitflag3]=fsolve(C3,[45]',optim_options);
+[b6, fval6, exitflag6]=fsolve(C6,[60]',optim_options);
+disp(b3 + 180);
+disp(b6 + 180);
+

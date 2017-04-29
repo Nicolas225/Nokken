@@ -89,6 +89,10 @@ elseif handles.temp.cycloidtype==6
 		A=-2*pi*L/beta^2*(sin(2*pi*x));
 
 end
+
+disp(max(abs(A)));        
+
+
 else
   errordlg('End angle should be bigger than start angle.', 'Error')
   theta = handles.out.thetadegree;
